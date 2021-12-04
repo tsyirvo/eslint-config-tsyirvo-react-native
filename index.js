@@ -8,7 +8,7 @@ module.exports = {
     'import',
   ],
   rules: {
-    'import/dynamic-import-chunkname': 'error',
+    'import/dynamic-import-chunkname': 'off',
     'import/export': 'error',
     'import/extensions': 'off',
     'import/newline-after-import': 'error',
@@ -91,11 +91,11 @@ module.exports = {
     'react/jsx-fragments': ['error', 'syntax'],
     'react/jsx-key': 'error',
     'react/jsx-no-bind': [
-      'error',
+      'warn',
       {
         ignoreDOMComponents: false,
         ignoreRefs: false,
-        allowArrowFunctions: false,
+        allowArrowFunctions: true,
         allowFunctions: false,
         allowBind: false,
       },
