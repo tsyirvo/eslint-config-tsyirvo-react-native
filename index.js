@@ -68,7 +68,7 @@ module.exports = {
     'react/no-unused-class-component-methods': 'error',
     'react/no-unused-state': 'error',
     'react/no-will-update-set-state': 'error',
-    'react/react-in-jsx-scope': 'error',
+    'react/react-in-jsx-scope': 'off',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
     'react/state-in-constructor': ['error', 'never'],
