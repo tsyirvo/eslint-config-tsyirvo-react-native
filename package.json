@@ -4,7 +4,7 @@
   "description": "Custom ESLint config for my React Native projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -39,9 +39,17 @@
     "typescript": ">= 4.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
+    "husky": "7.0.4",
     "semantic-release": "18.0.1",
     "semantic-release-cli": "5.4.4"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
