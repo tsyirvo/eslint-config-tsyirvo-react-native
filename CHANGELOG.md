@@ -1,3 +1,5 @@
+## [1.1.1](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.1.0...v1.1.1) (2021-12-16)
+
 # [1.1.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.0.4...v1.1.0) (2021-12-11)
 
 
