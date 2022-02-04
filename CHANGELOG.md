@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.1.1...v1.1.2) (2022-02-04)
+
+
+### Bug Fixes
+
+* update the boolean prefix rules ([#46](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/issues/46)) ([4b37e9d](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/commit/4b37e9d20c24f4affac8020b31f3ceb36cdc0ccb))
+
 ## [1.1.1](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.1.0...v1.1.1) (2021-12-16)
 
 # [1.1.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.0.4...v1.1.0) (2021-12-11)
