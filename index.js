@@ -135,7 +135,7 @@ module.exports = {
         selector: 'variable',
         types: ['boolean'],
         format: ['PascalCase'],
-        prefix: ['is', 'should', 'has', 'can', 'did', 'will'],
+        prefix: ['is', 'are', 'should', 'has', 'can', 'did', 'will'],
       },
       {
         selector: 'variable',
