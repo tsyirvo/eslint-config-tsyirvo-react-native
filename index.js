@@ -52,6 +52,20 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'react/hook-use-state': 'error',
+    'react/jsx-key': [
+      'error',
+      { checkFragmentShorthand: true, warnOnDuplicates: true },
+    ],
+    'react/jsx-sort-props': [
+      'error',
+      {
+        callbacksLast: true,
+        shorthandLast: true,
+        multiline: 'last',
+        reservedFirst: ['ref', 'key', 'testID'],
+      },
+    ],
     'react/no-access-state-in-setstate': 'error',
     'react/no-array-index-key': 'error',
     'react/no-arrow-function-lifecycle': 'error',
@@ -169,6 +183,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
+    '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       'warn',
       {
