@@ -44,7 +44,11 @@ module.exports = {
     ],
     'import/prefer-default-export': 'error',
 
-    'react/destructuring-assignment': ['error', 'always'],
+    'react/destructuring-assignment': [
+      'error',
+      'always',
+      { destructureInSignature: 'always' },
+    ],
     'react/function-component-definition': [
       'error',
       {
@@ -52,26 +56,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'react/no-access-state-in-setstate': 'error',
-    'react/no-array-index-key': 'error',
-    'react/no-arrow-function-lifecycle': 'error',
-    'react/no-children-prop': 'error',
-    'react/no-danger': 'error',
-    'react/no-deprecated': 'error',
-    'react/no-did-mount-set-state': 'error',
-    'react/no-did-update-set-state': 'error',
-    'react/no-direct-mutation-state': 'error',
-    'react/no-is-mounted': 'error',
-    'react/no-multi-comp': 'warn',
-    'react/no-redundant-should-component-update': 'error',
-    'react/no-unsafe': 'error',
-    'react/no-unused-class-component-methods': 'error',
-    'react/no-unused-state': 'error',
-    'react/no-will-update-set-state': 'error',
-    'react/react-in-jsx-scope': 'off',
-    'react/require-render-return': 'error',
-    'react/self-closing-comp': 'error',
-    'react/state-in-constructor': ['error', 'never'],
+    'react/hook-use-state': 'error',
     'react/jsx-boolean-value': ['error', 'never'],
     'react/jsx-closing-bracket-location': 'error',
     'react/jsx-closing-tag-location': 'error',
@@ -89,7 +74,11 @@ module.exports = {
       },
     ],
     'react/jsx-fragments': ['error', 'syntax'],
-    'react/jsx-key': 'error',
+    'react/jsx-key': [
+      'error',
+      { checkFragmentShorthand: true, warnOnDuplicates: true },
+    ],
+    'react/jsx-newline': 'error',
     'react/jsx-no-bind': [
       'warn',
       {
@@ -107,6 +96,36 @@ module.exports = {
     'react/jsx-pascal-case': 'error',
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-props-no-spreading': 'error',
+    'react/jsx-sort-props': [
+      'error',
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        multiline: 'last',
+        reservedFirst: true,
+      },
+    ],
+    'react/no-access-state-in-setstate': 'error',
+    'react/no-array-index-key': 'error',
+    'react/no-arrow-function-lifecycle': 'error',
+    'react/no-children-prop': 'error',
+    'react/no-danger': 'error',
+    'react/no-deprecated': 'error',
+    'react/no-did-mount-set-state': 'error',
+    'react/no-did-update-set-state': 'error',
+    'react/no-direct-mutation-state': 'error',
+    'react/no-is-mounted': 'error',
+    'react/no-multi-comp': 'warn',
+    'react/no-redundant-should-component-update': 'error',
+    'react/no-unsafe': 'error',
+    'react/no-unstable-nested-components': 'error',
+    'react/no-unused-class-component-methods': 'error',
+    'react/no-unused-state': 'error',
+    'react/no-will-update-set-state': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/require-render-return': 'error',
+    'react/self-closing-comp': 'error',
+    'react/state-in-constructor': ['error', 'never'],
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -120,6 +139,10 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': [
       'error',
       { 'ts-expect-error': 'allow-with-description' },
+    ],
+    '@typescript-eslint/consistent-generic-constructors': [
+      'error',
+      'constructor',
     ],
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
@@ -169,6 +192,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
+    '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       'warn',
       {
@@ -199,8 +223,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/restrict-template-expressions': 'error',
-
-    '@typescript-eslint/no-duplicate-imports': 'error',
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-magic-numbers': [
       'error',
