@@ -16,6 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure Git
+        run: |
+          git config --global user.name 'tsyirvo'
+          git config --global user.email 'gabriel.hofman.00@gmail.com'
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
