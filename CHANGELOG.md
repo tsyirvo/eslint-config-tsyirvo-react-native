@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.2.0...v1.3.0) (2022-09-17)
+
+
+### Features
+
+* add new rules for jest and testing-library ([#162](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/issues/162)) ([2ece241](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/commit/2ece2410782dcd57d29ed61ce0df188b6e8d1482))
+* update rules and base ts config ([#159](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/issues/159)) ([b0c6fae](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/commit/b0c6fae4e2ac32070e81e86d61a16d9e0ae791c6))
+
 # [1.2.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.1.2...v1.2.0) (2022-07-02)
 
 
