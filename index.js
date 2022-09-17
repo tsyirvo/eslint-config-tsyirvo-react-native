@@ -309,8 +309,15 @@ module.exports = {
   overrides: [
     {
       files: ['**/__tests__/**/*'],
-      plugins: ['jest'],
-      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+      plugins: ['jest', 'testing-library'],
+      extends: [
+        'plugin:jest/recommended',
+        'plugin:jest/style',
+        'plugin:testing-library/react',
+      ],
+      rules: {
+        'testing-library/prefer-screen-queries': 'off',
+      },
     },
   ],
   globals: {
