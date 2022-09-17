@@ -306,6 +306,20 @@ module.exports = {
     '@typescript-eslint/require-await': 'error',
     '@typescript-eslint/return-await': 'error',
   },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*'],
+      plugins: ['jest', 'testing-library'],
+      extends: [
+        'plugin:jest/recommended',
+        'plugin:jest/style',
+        'plugin:testing-library/react',
+      ],
+      rules: {
+        'testing-library/prefer-screen-queries': 'off',
+      },
+    },
+  ],
   globals: {
     fetch: true,
   },
