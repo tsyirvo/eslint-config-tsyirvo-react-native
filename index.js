@@ -42,7 +42,7 @@ module.exports = {
         },
       },
     ],
-    'import/prefer-default-export': 'error',
+    'import/prefer-default-export': 'off',
 
     'react/destructuring-assignment': [
       'error',
@@ -158,7 +158,7 @@ module.exports = {
         selector: 'variable',
         types: ['boolean'],
         format: ['PascalCase'],
-        prefix: ['is', 'are', 'should', 'has', 'can', 'did', 'will'],
+        prefix: ['is', 'are', 'should', 'has', 'can', 'did', 'will', 'does'],
       },
       {
         selector: 'variable',
