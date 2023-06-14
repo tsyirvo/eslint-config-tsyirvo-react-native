@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.3.0...v1.4.0) (2023-06-14)
+
+
+### Features
+
+* revert back to push ([#166](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/issues/166)) ([09f4c20](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/commit/09f4c208da6a5b0a2d35914f0a234db8ff4cb092))
+* run release on pull request ([#164](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/issues/164)) ([ac3ce60](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/commit/ac3ce601b102b0ac2b9313ea6a5770f97f61d7de))
+
 # [1.3.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.2.0...v1.3.0) (2022-09-17)
 
 
