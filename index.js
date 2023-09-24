@@ -1,18 +1,45 @@
 module.exports = {
-  extends: ['airbnb-typescript', 'prettier'],
+  extends: [
+    'prettier',
+    'airbnb-typescript',
+    'eslint:recommended',
+    'plugin:import/recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   plugins: [
     '@typescript-eslint',
     'react-hooks',
     'react',
     'react-native',
     'import',
+    'unicorn',
+    'react-refresh',
   ],
   rules: {
+    'consistent-return': 'error',
+    'default-case': 'error',
+    eqeqeq: ['error', 'always'],
+    'no-await-in-loop': 'error',
+    'no-promise-executor-return': 'error',
+    'max-depth': ['error', 4],
+    'max-nested-callbacks': ['error', 3],
+    'max-params': ['error', 3],
+    'no-console': 'warn',
+    'no-else-return': 'error',
+    'no-param-reassign': 'error',
+    'no-return-assign': 'error',
+    'no-undef': 'off',
+    'no-useless-return': 'error',
+    'prefer-promise-reject-errors': 'error',
+    'require-atomic-updates': 'error',
+
+    'import/no-deprecated': 'warn',
     'import/dynamic-import-chunkname': 'off',
-    'import/export': 'error',
     'import/extensions': 'off',
     'import/newline-after-import': 'error',
     'import/no-cycle': ['error', { ignoreExternal: true }],
+    'import/no-default-export': 'error',
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'error',
     'import/no-mutable-exports': 'error',
@@ -42,7 +69,8 @@ module.exports = {
         },
       },
     ],
-    'import/prefer-default-export': 'off',
+
+    'react-refresh/only-export-components': 'warn',
 
     'react/destructuring-assignment': [
       'error',
@@ -52,8 +80,8 @@ module.exports = {
     'react/function-component-definition': [
       'error',
       {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
+        namedComponents: 'function-declaration',
+        unnamedComponents: ['function-expression', 'arrow-function'],
       },
     ],
     'react/hook-use-state': 'error',
@@ -89,10 +117,9 @@ module.exports = {
         allowBind: false,
       },
     ],
-    'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-constructed-context-values': 'error',
-    'react/jsx-no-duplicate-props': 'error',
     'react/jsx-no-useless-fragment': 'error',
+    'react/jsx-no-leaked-render': 'error',
     'react/jsx-pascal-case': 'error',
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-props-no-spreading': 'error',
@@ -108,13 +135,10 @@ module.exports = {
     'react/no-access-state-in-setstate': 'error',
     'react/no-array-index-key': 'error',
     'react/no-arrow-function-lifecycle': 'error',
-    'react/no-children-prop': 'error',
     'react/no-danger': 'error',
     'react/no-deprecated': 'error',
     'react/no-did-mount-set-state': 'error',
     'react/no-did-update-set-state': 'error',
-    'react/no-direct-mutation-state': 'error',
-    'react/no-is-mounted': 'error',
     'react/no-multi-comp': 'warn',
     'react/no-redundant-should-component-update': 'error',
     'react/no-unsafe': 'error',
@@ -123,7 +147,6 @@ module.exports = {
     'react/no-unused-state': 'error',
     'react/no-will-update-set-state': 'error',
     'react/react-in-jsx-scope': 'off',
-    'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
     'react/state-in-constructor': ['error', 'never'],
 
@@ -140,14 +163,15 @@ module.exports = {
       'error',
       { 'ts-expect-error': 'allow-with-description' },
     ],
+    '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/consistent-generic-constructors': [
       'error',
       'constructor',
     ],
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/indent': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -182,17 +206,12 @@ module.exports = {
       },
       {
         selector: 'function',
-        format: ['camelCase'],
+        format: ['camelCase', 'PascalCase'],
         leadingUnderscore: 'allow',
       },
     ],
-    '@typescript-eslint/no-explicit-any': 'error',
-    '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/no-misused-promises': 'error',
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
-    '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
-    '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       'warn',
       {
@@ -200,10 +219,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-unnecessary-condition': 'error',
-    '@typescript-eslint/no-unsafe-argument': 'error',
-    '@typescript-eslint/no-unsafe-assignment': 'error',
-    '@typescript-eslint/no-unsafe-call': 'error',
-    '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': [
       'error',
@@ -222,8 +237,6 @@ module.exports = {
         checkMethodDeclarations: true,
       },
     ],
-    '@typescript-eslint/restrict-template-expressions': 'error',
-    '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-magic-numbers': [
       'error',
       {
@@ -232,7 +245,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-redeclare': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     '@typescript-eslint/padding-line-between-statements': [
@@ -303,8 +315,15 @@ module.exports = {
         ],
       },
     ],
-    '@typescript-eslint/require-await': 'error',
     '@typescript-eslint/return-await': 'error',
+
+    'unicorn/catch-error-name': 'error',
+    'unicorn/consistent-destructuring': 'error',
+    'unicorn/error-message': 'error',
+    'unicorn/explicit-length-check': 'error',
+    'unicorn/no-negated-condition': 'warn',
+    'unicorn/no-nested-ternary': 'error',
+    'unicorn/prefer-default-parameters': 'error',
   },
   overrides: [
     {
@@ -317,6 +336,18 @@ module.exports = {
       ],
       rules: {
         'testing-library/prefer-screen-queries': 'off',
+      },
+    },
+    {
+      files: ['src/core/i18n/resources/**/*.json'],
+      extends: ['plugin:i18n-json/recommended'],
+      rules: {
+        'i18n-json/valid-message-syntax': [
+          2,
+          {
+            syntax: 'non-empty-string',
+          },
+        ],
       },
     },
   ],
@@ -345,6 +376,7 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/ignore': ['react-native'],
   },
   ignorePatterns: [
     '__mocks__',
