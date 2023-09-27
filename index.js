@@ -5,7 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/strict-type-checked',
   ],
   plugins: [
     '@typescript-eslint',
@@ -71,6 +71,9 @@ module.exports = {
     ],
 
     'react-refresh/only-export-components': 'warn',
+
+    'react-native/no-unused-styles': 'error',
+    'react-native/no-color-literals': 'warn',
 
     'react/destructuring-assignment': [
       'error',
