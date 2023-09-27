@@ -5,7 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/strict-type-checked',
   ],
   plugins: [
     '@typescript-eslint',
