@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.4.0...v1.5.0) (2023-09-27)
+
+
+### Features
+
+* update eslint rules and plugins ([#168](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/issues/168)) ([3584e38](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/commit/3584e388ab3d74b5fcfda44ee92e70009d125cb2))
+
 # [1.4.0](https://github.com/tsyirvo/eslint-config-tsyirvo-react-native/compare/v1.3.0...v1.4.0) (2023-06-14)
 
 
