@@ -215,6 +215,10 @@ module.exports = {
     ],
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
+    '@typescript-eslint/no-misused-promises': [
+      'warn',
+      { checksVoidReturn: { attributes: false } },
+    ],
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       'warn',
       {
@@ -248,7 +252,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-redeclare': 'error',
-    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     '@typescript-eslint/padding-line-between-statements': [
       'error',
