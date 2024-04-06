@@ -15,6 +15,7 @@ module.exports = {
     'import',
     'unicorn',
     'react-refresh',
+    'filename-rules',
   ],
   rules: {
     'consistent-return': 'error',
@@ -34,12 +35,17 @@ module.exports = {
     'prefer-promise-reject-errors': 'error',
     'require-atomic-updates': 'error',
 
+    'filename-rules/match': [
+      'error',
+      { '.js': 'camelCase', '.ts': 'camelCase', '.tsx': 'PascalCase' },
+    ],
+
     'import/no-deprecated': 'warn',
     'import/dynamic-import-chunkname': 'off',
     'import/extensions': 'off',
     'import/newline-after-import': 'error',
     'import/no-cycle': ['error', { ignoreExternal: true }],
-    'import/no-default-export': 'error',
+    'import/no-default-export': 'off',
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'error',
     'import/no-mutable-exports': 'error',
@@ -83,8 +89,8 @@ module.exports = {
     'react/function-component-definition': [
       'error',
       {
-        namedComponents: 'function-declaration',
-        unnamedComponents: ['function-expression', 'arrow-function'],
+        namedComponents: 'arrow-function',
+        unnamedComponents: ['arrow-function'],
       },
     ],
     'react/hook-use-state': 'error',
@@ -159,6 +165,8 @@ module.exports = {
     'react-native/no-unused-styles': 'error',
     'react-native/no-inline-styles': 'warn',
     'react-native/no-inline-styles': 'error',
+    'react-native/no-raw-text': 'error',
+    'react-native/no-single-element-style-arrays': 'error',
 
     '@typescript-eslint/array-type': ['warn', { default: 'array' }],
     '@typescript-eslint/await-thenable': 'error',
