@@ -37,7 +37,12 @@ module.exports = {
 
     'filename-rules/match': [
       'error',
-      { '.js': 'camelCase', '.ts': 'camelCase', '.tsx': 'PascalCase' },
+      {
+        'index.ts': 'camelCase',
+        '.js': 'camelCase',
+        '.ts': 'camelCase',
+        '.tsx': 'PascalCase',
+      },
     ],
 
     'import/no-deprecated': 'warn',
@@ -165,7 +170,10 @@ module.exports = {
     'react-native/no-unused-styles': 'error',
     'react-native/no-inline-styles': 'warn',
     'react-native/no-inline-styles': 'error',
-    'react-native/no-raw-text': 'error',
+    'react-native/no-raw-text': [
+      'error',
+      { skip: ['Button.Text', 'Button.WithIcon'] },
+    ],
     'react-native/no-single-element-style-arrays': 'error',
 
     '@typescript-eslint/array-type': ['warn', { default: 'array' }],
