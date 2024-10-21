@@ -355,6 +355,12 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['src/app/**/*.tsx'],
+      rules: {
+        'filename-rules/match': 'off',
+      },
+    },
+    {
       files: ['**/__tests__/**/*'],
       plugins: ['jest', 'testing-library'],
       extends: [
