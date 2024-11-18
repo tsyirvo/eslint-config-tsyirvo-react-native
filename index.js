@@ -212,8 +212,8 @@ module.exports = {
       'error',
       {
         callbacksLast: true,
-        shorthandFirst: true,
-        multiline: 'last',
+        multiline: 'ignore',
+        noSortAlphabetically: true,
         reservedFirst: true,
       },
     ],
