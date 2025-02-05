@@ -401,12 +401,6 @@ module.exports = {
     project: './tsconfig.json',
   },
   settings: {
-    'import/resolver': {
-      'babel-plugin-root-import': {
-        rootPathPrefix: '$',
-        rootPathSuffix: 'src',
-      },
-    },
     react: {
       version: 'detect',
     },
