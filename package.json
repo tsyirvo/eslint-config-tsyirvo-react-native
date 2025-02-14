@@ -3,6 +3,7 @@
   "version": "1.5.0",
   "description": "Custom ESLint config for my React Native projects",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "prepare": "husky"
   },
