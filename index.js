@@ -342,6 +342,12 @@ module.exports = {
     '@typescript-eslint/no-redeclare': 'error',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/return-await': 'error',
+    '@typescript-eslint/restrict-template-expressions': [
+      'warn',
+      {
+        allowNumber: true,
+      },
+    ],
 
     'unicorn/catch-error-name': 'error',
     'unicorn/consistent-destructuring': 'error',
