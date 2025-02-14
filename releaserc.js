@@ -13,7 +13,7 @@ module.exports = {
       },
     ],
     '@semantic-release/release-notes-generator',
-    '@semantic-release/npm',
+    // '@semantic-release/npm',
     '@semantic-release/github',
     [
       '@semantic-release/changelog',
