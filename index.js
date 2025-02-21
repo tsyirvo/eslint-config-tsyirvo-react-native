@@ -24,7 +24,7 @@ module.exports = {
     'no-await-in-loop': 'error',
     'no-promise-executor-return': 'error',
     'max-depth': ['error', 4],
-    'max-nested-callbacks': ['error', 3],
+    'max-nested-callbacks': ['error', 4],
     'max-params': ['error', 3],
     'no-console': 'warn',
     'no-else-return': 'error',
@@ -174,10 +174,7 @@ module.exports = {
     'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-brace-presence': ['error', 'never'],
     'react/jsx-curly-newline': 'error',
-    'react/jsx-curly-spacing': [
-      'error',
-      { when: 'never', attributes: { allowMultiline: false }, children: true },
-    ],
+    'react/jsx-curly-spacing': ['error', 'never'],
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': [
       'warn',
@@ -375,7 +372,9 @@ module.exports = {
         'plugin:testing-library/react',
       ],
       rules: {
-        'testing-library/prefer-screen-queries': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        '@typescript-eslint/no-magic-numbers': 'off',
+        'max-nested-callbacks': ['error', 8],
       },
     },
     {
