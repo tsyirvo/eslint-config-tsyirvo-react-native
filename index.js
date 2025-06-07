@@ -221,7 +221,6 @@ export default defineConfig([
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
-    // extends: [importPlugin.flatConfigs.recommended],
     plugins: {
       unicorn: eslintPluginUnicorn,
       'filename-rules': fixupPluginRules(filenameRules),
