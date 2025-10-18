@@ -7,6 +7,7 @@ import i18nJsonPlugin from 'eslint-plugin-i18n-json';
 import importPlugin from 'eslint-plugin-import';
 import jestPlugin from 'eslint-plugin-jest';
 import pluginReact from 'eslint-plugin-react';
+import pluginReactCompiler from 'eslint-plugin-react-compiler';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import reactNative from 'eslint-plugin-react-native';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -24,68 +25,21 @@ export default defineConfig([
     'src/components/icons/components/',
   ]),
   eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
-  ...tseslint.config({
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-    files: ['**/*.{ts,tsx}'],
-    rules: {
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'variable',
-          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        },
-        {
-          selector: 'variable',
-          types: ['boolean'],
-          format: ['PascalCase'],
-          prefix: ['is', 'are', 'should', 'has', 'can', 'did', 'will', 'does'],
-        },
-        {
-          selector: 'variable',
-          modifiers: ['destructured'],
-          format: null,
-        },
-        {
-          selector: 'parameter',
-          format: ['camelCase'],
-          leadingUnderscore: 'allow',
-        },
-        {
-          selector: 'memberLike',
-          modifiers: ['private'],
-          format: ['camelCase'],
-          leadingUnderscore: 'require',
-        },
-        {
-          selector: 'typeLike',
-          format: ['PascalCase'],
-        },
-        {
-          selector: 'function',
-          format: ['camelCase', 'PascalCase'],
-          leadingUnderscore: 'allow',
-        },
-      ],
-      '@typescript-eslint/no-unnecessary-type-parameters': 'off',
-    },
-  }),
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
       react: pluginReact,
-      'react-hooks': pluginReactHooks,
       'react-native': fixupPluginRules(reactNative),
       'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint.plugin,
       import: importPlugin,
     },
-    extends: [importPlugin.flatConfigs.typescript],
+    extends: [
+      pluginReactHooks.configs.flat['recommended-latest'],
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+      pluginReactCompiler.configs.recommended,
+    ],
     rules: {
       'react/destructuring-assignment': [
         'error',
@@ -163,9 +117,6 @@ export default defineConfig([
       'react/self-closing-comp': 'error',
       'react/state-in-constructor': ['error', 'never'],
 
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-
       'react-native/no-color-literals': 'warn',
       'react-native/no-unused-styles': 'error',
       'react-native/no-inline-styles': 'warn',
@@ -176,6 +127,46 @@ export default defineConfig([
       'react-native/no-single-element-style-arrays': 'error',
 
       'react-refresh/only-export-components': 'warn',
+
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'variable',
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        },
+        {
+          selector: 'variable',
+          types: ['boolean'],
+          format: ['PascalCase'],
+          prefix: ['is', 'are', 'should', 'has', 'can', 'did', 'will', 'does'],
+        },
+        {
+          selector: 'variable',
+          modifiers: ['destructured'],
+          format: null,
+        },
+        {
+          selector: 'parameter',
+          format: ['camelCase'],
+          leadingUnderscore: 'allow',
+        },
+        {
+          selector: 'memberLike',
+          modifiers: ['private'],
+          format: ['camelCase'],
+          leadingUnderscore: 'require',
+        },
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+        },
+        {
+          selector: 'function',
+          format: ['camelCase', 'PascalCase'],
+          leadingUnderscore: 'allow',
+        },
+      ],
+      '@typescript-eslint/no-unnecessary-type-parameters': 'off',
 
       'import/no-deprecated': 'warn',
       'import/dynamic-import-chunkname': 'off',
@@ -373,6 +364,8 @@ export default defineConfig([
   {
     languageOptions: {
       parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
         ecmaVersion: 2022,
         ecmaFeatures: {
           jsx: true,
